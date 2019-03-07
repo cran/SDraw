@@ -4,8 +4,8 @@
 \alias{halton.indices.vector}
 \title{Halton indices for an entire vector of coordinates}
 \usage{
-halton.indices.vector(hl.coords, n.boxes, D = 2, b = c(2, 3), delta = c(1,
-  1), ll.corner = c(0, 0))
+halton.indices.vector(hl.coords, n.boxes, D = 2, b = c(2, 3),
+  delta = c(1, 1), ll.corner = c(0, 0))
 }
 \arguments{
 \item{hl.coords}{nXD vector of coordinates for points}
@@ -49,8 +49,9 @@ pt <- data.frame(x=0.43, y=0.64)
 n.boxes <- c(16,9) 
 halton.indices.vector(pt, n.boxes) # should equal 70
 
+# The following should also equal 70
 pt <- data.frame(x=143, y=164)
-halton.indices.vector(pt, n.boxes, delta=c(100,100), ll.corner=c(100,100)) # should also equal 70
+halton.indices.vector(pt, n.boxes, delta=c(100,100), ll.corner=c(100,100)) 
 
 # Plot Halton boxes and indices to check
 b <- c(2,3)
@@ -67,10 +68,9 @@ points(pt$x, pt$y, col=6, pch=16, cex=2)
 
 
 }
-\author{
-Trent McDonald
-}
 \seealso{
 \code{\link{halton.indices.CRT}}, \code{\link{halton.indices}}
 }
-
+\author{
+Trent McDonald
+}

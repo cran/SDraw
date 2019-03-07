@@ -28,7 +28,7 @@ as follows:
   \item \code{pointType}: A string identifying regular sample points (\code{pointType=="Sample"})
   and over-sample points (\code{pointType=="OverSample"}).
   \item \code{geometryID}: The ID of the point in \code{x} which was sampled.  The 
-  ID of points in \code{x} are \code{row.names(geometry(x))}. 
+  ID of points in \code{x} are \code{row.names(} \code{geometry(x))}. 
   \item Any attributes of the original points (in \code{x}). 
 }
 }
@@ -62,9 +62,6 @@ plot( WA.city.samp[ WA.city.samp$pointType == "OverSample", ], pch=2, add=TRUE, 
 
 
 }
-\author{
-Trent McDonald
-}
 \references{
 Stevens, D. L. and A. R. Olsen (1999). Spatially restricted
 surveys over time for aquatic resources. Journal of Agricultural,
@@ -75,9 +72,11 @@ natural resources. Journal of the American Statistical Association 99,
 262-278.
 }
 \seealso{
-\code{\link{grts.line}}, \code{\link{grts.polygon}}, \code{\link{hal.point}},
+\code{\link{grts.line}}, \code{\link{grts.polygon}}, \code{\link{hip.point}},
  \code{\link{sdraw}}
+}
+\author{
+Trent McDonald
 }
 \keyword{design}
 \keyword{survey}
-

@@ -22,8 +22,9 @@ in BAS order.
  Attributes of the sample points are: 
 \itemize{
   \item \code{sampleID}: A unique identifier for every sample point.  This 
-  encodes the BAS order.  \code{return[order(return$sampleID),]} will sort the 
-  returned object in BAS order.
+  encodes the BAS order. If BAS order is lost, \code{return[} \code{order(} 
+  \code{return$sampleID} \code{),]} will resort the 
+  returned object (i.e., \code{return}) into BAS order.
   
   \item \code{geometryID}: The ID of the polygon in \code{x} which each 
   sample point falls.  The 
@@ -90,9 +91,6 @@ points( WA_sample[ WA_sample$siteID >  100, ], pch=1 )
 
 
 }
-\author{
-Trent McDonald
-}
 \references{
 Robertson, B.L., J. A. Brown, T. L. McDonald, and P. Jaksons
 (2013) "BAS: Balanced Acceptance Sampling of Natural Resources", Biometrics,
@@ -101,6 +99,8 @@ v69, p. 776-784.
 \seealso{
 \code{\link{bas.line}}, \code{\link{bas.point}}, \code{\link{sdraw}}
 }
+\author{
+Trent McDonald
+}
 \keyword{design}
 \keyword{survey}
-

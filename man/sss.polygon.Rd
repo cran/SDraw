@@ -4,7 +4,8 @@
 \alias{sss.polygon}
 \title{Draws a Simple Systematic Sample (SSS) from an area resource (polygons).}
 \usage{
-sss.polygon(x, n, spacing = c(1, 1), triangular = FALSE, rand.dir = FALSE)
+sss.polygon(x, n, spacing = c(1, 1), triangular = FALSE,
+  rand.dir = FALSE)
 }
 \arguments{
 \item{x}{A \code{SpatialPolygons} or \code{SpatialPolygonsDataFrame} 
@@ -18,11 +19,11 @@ polygons contained in \code{x}.}
 \item{spacing}{A vector of length 2 containing the RELATIVE spacing of grid
 points in the horizontal (X) and vertical (Y) directions.  See details.}
 
-\item{triangular}{Boolean scaler specifying whether to produce a rectangular
+\item{triangular}{Boolean scalar specifying whether to produce a rectangular
 (\code{triangular==FALSE}) or triangular (\code{triangular==TRUE}) grid. 
 See Details.}
 
-\item{rand.dir}{Either a boolean scaler specifying whether to randomly 
+\item{rand.dir}{Either a boolean scalar specifying whether to randomly 
 orient the
 grid's horizontal axis (\code{rand.dir==TRUE}) or not 
 (\code{rand.dir==FALSE}), or
@@ -92,7 +93,7 @@ make it a \code{SpatialPointsDataFrame}, are:
    \item \code{rand.dir}: The (potentially randomly chosen) direction for the grid's 
    horizontal axis. This is in radians between -pi/4 and pi/4. 
    \code{rand.dir} = 0 corresponds to no rotation 
-   (i.e., \code{rand.dir = FALSE}).  
+   (i.e., \code{rand.dir =} \code{FALSE}).  
    
    \item \code{rand.shift}: The random shift of the grid.  This is a vector 
    of length 2 containing the  random shifts in the horizontal and vertical 
@@ -174,12 +175,11 @@ WA.samp <- sss.polygon( WA, 100, spacing=c(2,3), triangular=TRUE )
 
 
 }
-\author{
-Trent McDonald
-}
 \seealso{
 \code{\link{bas.polygon}}, \code{\link{sdraw}}
 }
+\author{
+Trent McDonald
+}
 \keyword{design}
 \keyword{survey}
-

@@ -31,12 +31,12 @@
 #'   \item \code{pointType}: A string identifying regular sample points (\code{pointType=="Sample"})
 #'   and over-sample points (\code{pointType=="OverSample"}).
 #'   \item \code{geometryID}: The ID of the point in \code{x} which was sampled.  The 
-#'   ID of points in \code{x} are \code{row.names(geometry(x))}. 
+#'   ID of points in \code{x} are \code{row.names(} \code{geometry(x))}. 
 #'   \item Any attributes of the original points (in \code{x}). 
 #' }
 #'
 #' @author Trent McDonald
-#' @seealso \code{\link{grts.line}}, \code{\link{grts.polygon}}, \code{\link{hal.point}},
+#' @seealso \code{\link{grts.line}}, \code{\link{grts.polygon}}, \code{\link{hip.point}},
 #'  \code{\link{sdraw}}
 #' 
 #' @references Stevens, D. L. and A. R. Olsen (1999). Spatially restricted

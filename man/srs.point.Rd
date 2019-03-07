@@ -23,7 +23,7 @@ Attributes of the returned sample points are:
   \code{sampleID} starts with 1 at the first point and 
   increments by one for each.  
   \item If \code{x} inherits from \code{SpatialPoints}, 
-  returned points have attribute \code{geometryID} -- the ID (=\code{row.names(x)}) of 
+  returned points have attribute \code{geometryID} -- the ID (= \code{row.names(x)} ) of 
   the sampled point. 
   \item Any attributes (columns) associated with the input points (rows).
 }
@@ -57,12 +57,11 @@ df <- data.frame( a=1:100, b=runif(100) )
 samp <- srs.point( df, 5 )   
 
 }
-\author{
-Trent McDonald
-}
 \seealso{
 \code{\link{srs.polygon}}, \code{\link{srs.line}}, \code{\link{sdraw}}
 }
+\author{
+Trent McDonald
+}
 \keyword{design}
 \keyword{survey}
-

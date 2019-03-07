@@ -20,7 +20,7 @@ are "1D" or "2D".
 Under "1D" all lines in \code{x} are stretched straight 
 and laid end-to-end in the order they appear in \code{x} and a 1-dimensional 
 BAS sample is taken from the amalgamated line.  1D sample locations on the 
-amalgomated line are  
+amalgamated line are  
 mapped back to two dimensional space for output and 
 appear on the original lines.  This
 method maintains 1D spatial balance, but not necessarily 2D balance.  Spatially 
@@ -39,10 +39,10 @@ scalar controlling the number of points to
 place on the lines before drawing the 2D BAS sample.  
 Number of points created on the line is
 \code{n*init.n.factor}, so this number can grow quickly.  On average, this
-is the number of unselected points between each selected point.  See
+is the number of un-selected points between each selected point.  See
 Details.
 
-If one desires an underlying grid spaced \emph{w} meters appart, set 
+If one desires an underlying grid spaced \emph{w} meters apart, set 
 \code{init.n.factor} to \emph{L/(w*n)}, where \emph{L} is total length 
 of all lines in \code{x} and \emph{n} is sample size.}
 }
@@ -52,8 +52,9 @@ in BAS order.
  Attributes of the sample points are: 
 \itemize{
   \item \code{sampleID}: A unique identifier for every sample point.  This 
-  encodes the BAS order.  \code{return[order(return$sampleID),]} will sort the 
-  returned object in BAS order.
+  encodes the BAS order.  If BAS order is lost, \code{return[} \code{order(} 
+  \code{return$sampleID} \code{),]} will resort the 
+  returned object (i.e., \code{return}) into BAS order.
   
   \item \code{geometryID}: The ID of the line in \code{x} on which each 
   sample point falls.  The 
@@ -76,18 +77,18 @@ make it a \code{SpatialPointsDataFrame}, are:
    a vector of two uniform random 
    integers between 0 and \code{\link{maxU}}.  
    
-   \item \code{bas.bbox}: If \code{balance=="2D"}, this is the square 
+   \item \code{bas.bbox}: If \code{balance=="2D"}, this is the 
    bounding box surrounding \code{x}
-   used to scale Halton points.  A scaled Halton sequence of n points
-   used to sample points on the lines of \code{x} is 
-   \code{bas.bbox[,"min"] + t(halton(n,2,random.start)) * 
-   rep( max(diff(t(bas.bbox))), 2)}.
+   used to scale Halton points.  The scaled Halton sequence is 
+   \code{bas.bbox[,"min"]+} \code{t(halton(n,2,random.start))*} 
+   \code{rep(max(} \code{diff(t(bas.bbox))),} \code{2)}.
    If \code{balance=="1D"}, this is a vector containing the 1D 
-   bounding box. The 1D bounding box is 0 to the total 
-   length of all lines in \code{x}.  In this case, Halton points 
-   are scaled as \code{bas.bbox[,"min"] + halton(n,1,random.start) * 
-   diff(bas.bbox)} which is equivalent to \code{halton(n,1,random.start) * 
-   bas.bbox[2]} because \code{bas.bbox[1]} is zero in this case.
+   bounding box. Lower limit of the 1D bounding box is 0.  Upper
+   limit of the 1D box is the total 
+   length of lines in \code{x}.  In this case, Halton points 
+   are scaled as \code{bas.bbox[,"min"]+} \code{halton(n,1,random.start)*} 
+   \code{diff(bas.bbox)} which is equivalent to \code{halton(n,1,} \code{random.start)*} 
+   \code{bas.bbox[2]} because \code{bas.bbox[1]} is zero.
 }
 }
 \description{
@@ -105,7 +106,7 @@ If a "2D" BAS sample is requested, spatial balance is maintained
 in 2 dimensions.  Points are well balance on a 2D map.  This is 
 done by discretization of lines with a dense systematic 
 sample of points (with 
-random start) where density of the systematic points is controled 
+random start) where density of the systematic points is controlled 
 by \code{init.n.factor}.  After
 discretization of the line, points are selected 
 using \code{\link{bas.point}}.  The BAS method for points places
@@ -128,12 +129,11 @@ points( samp, pch=16, col="red" )
 
 
 }
-\author{
-Trent McDonald
-}
 \seealso{
 \code{\link{bas.line}}, \code{\link{bas.polygon}}, \code{\link{sdraw}}
 }
+\author{
+Trent McDonald
+}
 \keyword{design}
 \keyword{survey}
-

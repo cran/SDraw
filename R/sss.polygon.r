@@ -66,11 +66,11 @@
 #' @param spacing A vector of length 2 containing the RELATIVE spacing of grid
 #' points in the horizontal (X) and vertical (Y) directions.  See details.
 #' 
-#' @param triangular Boolean scaler specifying whether to produce a rectangular
+#' @param triangular Boolean scalar specifying whether to produce a rectangular
 #' (\code{triangular==FALSE}) or triangular (\code{triangular==TRUE}) grid. 
 #' See Details.
 #' 
-#' @param rand.dir Either a boolean scaler specifying whether to randomly 
+#' @param rand.dir Either a boolean scalar specifying whether to randomly 
 #' orient the
 #' grid's horizontal axis (\code{rand.dir==TRUE}) or not 
 #' (\code{rand.dir==FALSE}), or
@@ -140,7 +140,7 @@
 #'    \item \code{rand.dir}: The (potentially randomly chosen) direction for the grid's 
 #'    horizontal axis. This is in radians between -pi/4 and pi/4. 
 #'    \code{rand.dir} = 0 corresponds to no rotation 
-#'    (i.e., \code{rand.dir = FALSE}).  
+#'    (i.e., \code{rand.dir =} \code{FALSE}).  
 #'    
 #'    \item \code{rand.shift}: The random shift of the grid.  This is a vector 
 #'    of length 2 containing the  random shifts in the horizontal and vertical 

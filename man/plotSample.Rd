@@ -9,7 +9,7 @@ plotSample(x, frame, lattice = FALSE, bbox = FALSE, add = FALSE,
 }
 \arguments{
 \item{x}{A \code{SpatialPointsDataFrame} produced by an SDraw sampling function.  For example, 
-as produced by \code{sdraw(frame,n)}.  This object is a standard \code{SpatialPointsDataFrame} object
+as produced by \code{sdraw(frame,n)}.  This object is a standard \code{Spatial} \code{Polygons}\code{DataFrame} object
 with additional attributes that record the sampling design.}
 
 \item{frame}{The sample frame used to draw the sample contained in \code{x}. This is 
@@ -35,7 +35,7 @@ Plot the sample and optionally the frame, background image (terrain), and lattic
 }
 \examples{
 data(WY)
-samp <- sdraw(WY, 100, type="HAL", J=c(4,3))
+samp <- sdraw(WY, 100, type="HIP", J=c(4,3))
 plotSample( samp, WY )
 plotSample( samp, WY, lattice=TRUE )
 
@@ -59,10 +59,9 @@ plot(openMap)
 plotSample(samp, WY, add=TRUE, poly.fill=FALSE)
 }
 }
-\author{
-Trent McDonald
-}
 \seealso{
 \code{\link{sdraw}}
 }
-
+\author{
+Trent McDonald
+}

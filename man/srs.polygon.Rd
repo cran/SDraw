@@ -57,13 +57,12 @@ points( WA.samp, pch=16 )
 
 
 }
+\seealso{
+\code{\link{bas.polygon}}, \code{\link{sss.polygon}}, 
+\code{\link{hip.polygon}}, \code{\link{sdraw}}
+}
 \author{
 Trent McDonald
 }
-\seealso{
-\code{\link{bas.polygon}}, \code{\link{sss.polygon}}, 
-\code{\link{hal.polygon}}, \code{\link{sdraw}}
-}
 \keyword{design}
 \keyword{survey}
-

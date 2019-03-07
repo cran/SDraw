@@ -27,8 +27,8 @@ This routine computes the element-wise gcd and
  
  The Wikipedia page, from which this algorithm was stolen, has the 
  following statement, 'The quotients of a and b by their greatest common divisor, 
- which are output, may have an incorrect sign.  this is easy to correct at the end
- of the computation, but has not been done here for simplifying the code. 
+ which are output, may have an incorrect sign.  This is easy to correct at the end
+ of the computation, but has not been done here for simplifying the code.' 
  I have absolutely no 
  idea what that means, but include it as a warning.  For purposes of 
  \code{SDraw}, elements of a and b are always positive, and I have never 
@@ -44,11 +44,10 @@ This routine computes the element-wise gcd and
  cbind(x$a*x$t + x$b*x$s, x$gcd)
  
 }
-\author{
-Trent McDonald
-}
 \references{
 Code is based on the following Wikipedia pseudo-code: 
  \url{https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm}
 }
-
+\author{
+Trent McDonald
+}

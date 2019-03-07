@@ -11,13 +11,13 @@ halton.indices(x, J = NULL, hl.bbox, bases = c(2, 3),
 \item{x}{Either a data frame or a \code{SpatialPoints*} object.
 Suitable input objects are the output of 
 functions \code{halton.lattice} (a data frame) and 
- \code{halton.lattice.polygon} (a \code{SpatialPointsDataFrame} object). 
+ \code{halton.lattice.}\code{polygon} (a \code{SpatialPointsDataFrame} object). 
  
  If \code{x} is a data frame, it must either contain the names of 
  coordinates columns as attribute "coordnames", or coordinates must 
  be the first D columns of the data frame.  
  I.e., coordinates are either \code{x[,attr(x,"coordnames")]} or 
- \code{x[,1:length(bases)]}. 
+ \code{x[,1:} \code{length(bases)]}. 
  
  This function  works for dimensions >2 if \code{x} is a data.frame.  
  \code{SpatialPoints*} objects are not defined for D>2.}
@@ -26,7 +26,7 @@ functions \code{halton.lattice} (a data frame) and
 of the smallest Halton boxes in D space. There are \code{bases[i]^J[i]} boxes
 over the i-th dimension of \code{x}'s bounding box.  Total number Halton boxes 
 is \code{prod(bases^J)}.  The size of each box in the i-th dimension is 
-\code{delta[i]/(bases[i]^J[i])}, where \code{delta[i]} is the  
+\code{delta[i]/} \code{(bases[i]^J[i])}, where \code{delta[i]} is the  
 extent of \code{x}'s bounding box along the i-th dimension.  
 If \code{J} is NULL (the default), approximately \code{length(x)} boxes 
 will be chosen (approx. one point per box) and boxes will be as square 
@@ -37,7 +37,7 @@ First column of this matrix is the lower-left coordinate (i.e., minimums)
 of the bounding box.  Second column is the upper-right coordinate 
 (i.e., maximums) of the bounding box.
 For example, if \code{D} = 2, \code{hl.bbox} = 
-\code{matrix( c(min(x),min(y),max(x),max(y)),2)}.  If \code{hl.bbox} is 
+\code{matrix(} \code{c(min(x),} \code{min(y),} \code{max(x),} \code{max(y)),2)}.  If \code{hl.bbox} is 
 missing (the default), the bounding box of \code{x} is used, but expanded 
 on the top and right by 1 percent to include any points exactly on the top and right 
 boundaries. If \code{hl.bbox} is supplied, keep in mind that all point outside
@@ -93,11 +93,11 @@ all points in the interval [0,1/8) have Halton index equal to 0, all
 point in [1/8,2/8) have Halton index 4, points in [2/8,3/8) have index
 2, etc. To check, note that the Halton sequence maps x (mod 8) = 4 to the interval 
 [1/8,2/8), x (mod 8) = 2 are mapped to [2/8,3/8), etc. (i.e., check 
-\code{range(halton(200)[(0:199) \%\% 8 == 4])} and 
-\code{range(halton(200)[(0:199) \%\% 8 == 2])}  )
+\code{range(halton(200)[} \code{(0:199)\%\%} \code{8 == 4])} and 
+\code{range(halton(200)[} \code{(0:199)\%\%} \code{8 == 2])}  )
 }
 \examples{
-# The following is equivalent to hal.point(WA.cities,25,J=c(3,2))
+# The following is equivalent to hip.point(WA.cities,25,J=c(3,2))
 #
 # Add tiny amount to right and top of bounding box because Halton boxes are 
 # closed on the left and bottom.  This includes points exactly on the bounding lines.
@@ -118,10 +118,9 @@ samp <- frame[ind,]  # draw sample
 
 
 }
+\seealso{
+\code{\link{halton.frame}}, \code{\link{hip.point}}
+}
 \author{
 Trent McDonald
 }
-\seealso{
-\code{\link{halton.frame}}, \code{\link{hal.point}}
-}
-

@@ -2,14 +2,14 @@
 % Please edit documentation in R/SDraw-package.r
 \docType{package}
 \name{SDraw-package}
-\alias{BAS-package}
-\alias{GRTS}
-\alias{HAL-package}
-\alias{SDraw}
 \alias{SDraw-package}
-\alias{SRS}
-\alias{SSS-package}
 \alias{_PACKAGE}
+\alias{BAS-package}
+\alias{HAL-package}
+\alias{GRTS}
+\alias{SSS-package}
+\alias{SDraw}
+\alias{SRS}
 \title{Selection of spatially balanced samples.}
 \description{
 SDraw provides a set of R functions that draw
@@ -37,10 +37,6 @@ The work-horse functions are named \code{???.point}, \code{???.line}, and
 \code{sdraw}, is provided to handle all combinations of sample and frame types 
 (see \code{\link{sdraw}}).
 }
-\author{
-Trent McDonald \code{tmcdonald@west-inc.com}. The GRTS routine comes from
-package \code{spsurvey}.
-}
 \references{
 Manly, B. F. J. and Navarro-Alberto, J. A., editors, (2015), "Introduction to Ecological Sampling", 
 CRC Press, Boca Raton, FL. 
@@ -55,10 +51,13 @@ natural resources." Journal of the American Statistical Association 99,
 }
 \seealso{
 \code{\link{sdraw}}, \code{\link{bas.polygon}}, \code{\link{bas.line}}, \code{\link{bas.point}},
-\code{\link{hal.polygon}}, \code{\link{hal.line}}, \code{\link{hal.point}}, 
+\code{\link{hip.polygon}}, \code{\link{hip.point}}, 
 \code{\link{sss.line}}, \code{\link{sss.polygon}},
 \code{\link{grts.polygon}}, \code{\link{grts.line}}, \code{\link{grts.point}}
 documentation for package \code{sp}.
 }
+\author{
+Trent McDonald \code{tmcdonald@west-inc.com}. The GRTS routine comes from
+package \code{spsurvey}.
+}
 \keyword{package}
-

@@ -23,7 +23,7 @@ Attributes of the returned sample points are:
   \code{sampleID} starts with 1 at the first point and 
   increments by one for each.  
   \item If \code{x} inherits from \code{SpatialPoints}, 
-  returned points have attribute \code{geometryID} -- the ID (=\code{row.names(x)}) of 
+  returned points have attribute \code{geometryID} -- the ID (= \code{row.names(x)} ) of 
   the sampled point. 
   \item Any attributes (columns) associated with the input points (rows).
 }
@@ -59,7 +59,7 @@ are \eqn{N} units in the frame (\eqn{N} = \code{nrow(x)}), each line segment has
 \eqn{n/N}, where \eqn{n} is the input desired sample size.  
  \item Line segments are placed end-to-end, starting at 0, in the order in which their associated
  unit appears in the frame. 
- \item To start the systematic sample, the routine choses a random number between 0 and 1. 
+ \item To start the systematic sample, the routine chooses a random number between 0 and 1. 
 Let this random number be \eqn{m}.
  \item The sample units associated with the line segments containing the numbers \eqn{m + i} for 
 \eqn{i} = 0,1,...,(\eqn{n-1}), are selected for the sample.       
@@ -80,12 +80,11 @@ samp <- sss.point( df, 5 )
 samp <- sss.point( df[order(df$b),], 5 )
 
 }
-\author{
-Trent McDonald
-}
 \seealso{
 \code{\link{sss.polygon}}, \code{\link{sss.line}}, \code{\link{sdraw}}
 }
+\author{
+Trent McDonald
+}
 \keyword{design}
 \keyword{survey}
-
