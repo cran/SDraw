@@ -48,8 +48,10 @@ complicated designs (e.g., variable probability, stratification), call
 }
 \examples{
 
+\dontrun{
 # Draw sample
-HI.sample <- grts.line(HI.coast,100,50)
+## The following take > 5s 
+HI.sample <- grts.line(HI.coast,10,5)
 
 # Plot
 plot( HI.coast )
@@ -59,7 +61,7 @@ plot( HI.sample[ HI.sample$pointType == "Sample", ], pch=16, add=TRUE, col="red"
 
 # Plot 'over sample' locations
 plot( HI.sample[ HI.sample$pointType == "OverSample", ], pch=1, add=TRUE, col="blue" )  
-
+}
 
 
 }
