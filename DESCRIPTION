@@ -1,8 +1,8 @@
 Package: SDraw
 Type: Package
 Title: Spatially Balanced Samples of Spatial Objects
-Version: 2.1.11
-Date: 2020-03-31
+Version: 2.1.13
+Date: 2020-07-03
 Maintainer: Trent McDonald <tmcdonald@west-inc.com>
 Authors@R: c(person("Trent", "McDonald", role=c("cre","aut"), email="tmcdonald@west-inc.com"), 
   person("Aidan", "McDonald", role="aut", email="amcdonald@west-inc.com", comment="HIP sampling methods"),
@@ -22,16 +22,17 @@ License: GNU General Public License
 URL: https://github.com/tmcd82070/SDraw/wiki/SDraw
 BugReports: https://github.com/tmcd82070/SDraw/issues
 Imports: spsurvey, utils, rgeos, graphics, methods, deldir, stats, covr
-Depends: sp, R (>= 2.10)
+Depends: sp, R (>= 3.5.0)
 LazyData: true
-Suggests: knitr, testthat, devtools, roxygen2
+Suggests: knitr, testthat, devtools, roxygen2, markdown
 VignetteBuilder: knitr
-RoxygenNote: 6.1.1
+RoxygenNote: 7.1.0
+Encoding: UTF-8
 NeedsCompilation: no
-Packaged: 2020-03-31 16:26:15 UTC; tmcdonald
+Packaged: 2020-07-03 15:41:11 UTC; tmcdonald
 Author: Trent McDonald [cre, aut],
   Aidan McDonald [aut] (HIP sampling methods),
   Michael Kleinsausser [ctb],
   Stefan Emmons [ctb] (Auto testing and Travis)
 Repository: CRAN
-Date/Publication: 2020-03-31 18:10:06 UTC
+Date/Publication: 2020-07-03 16:20:09 UTC
